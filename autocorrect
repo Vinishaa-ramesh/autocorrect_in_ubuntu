@@ -1,0 +1,11 @@
+#!/usr/bin/bash 
+
+while [ 1 -ne 0 ];
+do
+	echo -n "$PWD $ "
+	read command
+	v=$(python3 /home/sandhya/autocorrect.py $command 2>&1 > /dev/null)
+	echo "=> $v"
+	eval $v
+done
+
